@@ -1,6 +1,6 @@
 # Site settings
 title: Infinite
-smalltalk: "the untroubled musings of a clouded mind"
+smalltalk: "the musings of a clouded mind"
 description: > # My blog Powred by jekyll
 baseurl: "/Blog/" # the subpath of your site, e.g. /blog/
 paginate: 5
