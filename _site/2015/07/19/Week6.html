@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CS378 Summer 2015 Week 6</title>
+  <meta name="description" content="This week has bneen very interesting! But tough nonetheless. It started with a very unlucky choice in a partner for project 3 which I had explained in my pre...">
+
+  <link rel="canonical" href="http://davidpeterko.github.io/Blog/Blog/2015/07/19/Week6.html">
+  <!-- <link rel="alternate" type="application/rss+xml" title="Infinite" href="http://davidpeterko.github.io/Blog/Blog/feed.xml" /> -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+ 
+
+	
+  <!--Added styles css-->	
+  <link rel="stylesheet" href="/Blog/css/normalize.css"/>
+
+  <link rel="stylesheet" href="/Blog/css/custom.css"/>
+
+   <link rel="stylesheet" href="/Blog/css/style.css"/>
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+   <!--modernizr-->
+   <script src="/Blogjs/modernizr.js"></script>
+	
+
+
+</head>
+
+
+  <body>
+  <!--[if lt IE 7]>
+      <strong>It seems your browser is quite a bit old, to get latest browser go to this link <a href="http://browsehappy.com">BROWSE HAPPY </a> And get the happy face</strong>
+  <![endif]-->
+
+  
+<!-- Start with the header -->
+<section class="header" id="header">
+
+
+
+    <a class="tab pi-default pi-big pi-flat" target="_blank" href="https://github.com/davidpeterko"><i class="fa fa-github"></i> My Github</a>
+
+    <!-- Main Head Title -->
+    <h2><a href="/Blog/">Infinite</a></h2>
+    <p>the untroubled musings of a clouded mind</p>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+
+
+          <!--start of the post title-->
+    <section class="single-post-title-main">
+        <h2>CS378 Summer 2015 Week 6</h2>
+        <small>Written by Mahabub I.</small>
+    </section>
+<!--End of the post title-->
+
+<!--Start of the section post-->
+    <section class="post">
+       <p>
+          <p>This week has bneen very interesting! But tough nonetheless. It started with a very unlucky choice in a partner for project 3 which I had explained in my previous blog post. Because I was not careful with how the course is structured with how projects are graded, I had assumed that I would recieve pointed for the other things if our Mersenne prime did not output correctly. Unfortunately, that is not the case. Thankfully, Downing was nice enough to give me a 24 extension from the time I turned in Deque to try and complete it and get it turned it again for a 1 day late penalty. So this week we had to do project 4 whihc was Deque.h. For all the people who bother reading this out there for future takers of this class, Integer and Deque are extremely hard and require ALOT of time and planning; how the class actually works, how to manipulate the underlying containers and how you want to structure your code (private variables, iterators etc.).</p>
+
+<p>While me and my partner, thank god he was a REAL partner and we actually got to work on this together with 2 minds and not 1 mind, we finished Deque 1 day late by a hair. We had finished resize and tested it vs other tests in the repo. Then came the problem with our destructor. For some reason we passed all tests, but in the valgrind summary, we had 1 block of 80 bytes not being freed (since our inner array size was 20 and we used ints in the test, there was 80 bytes left over somewhere). It turns out the std::copy function we used for resize skipped the last block.. it shouldve been std::copy(begin, end+ 1, new_begin). That one part took us the most time to figure out and comb through our code. Just unlucky ! </p>
+
+<p>Now that we got Deque turned in, I had even more work to do. As soon as i got it turned in, I opened up Integer and worked on it until the crack of dawn. Fixing mulutplies_digit broke the other functions such as *=. That in turn broke something else and it just snowballed, so I ended up practically working on Integer backwards to fix everything. By 6 am, I had the Mersenne prime correctlyt outputting under 115 ms on the lab machines. The 30th took a bit longer, I believe around 1 minute 30 seconds. by this time I was too tired to rewrite my unit tests since the ones i wrote before were for a different type of function that we wrote. I picked up the next day after class and clean up the code and fixed mod, and div’s tests cases and boom! Got INteger turned int. Then off to work on programming languages assignment… had to read a few sections on Haskell list comprehension, but the assignment wasnt too bad only took a few hours. </p>
+
+<p>So its Friday at 10:30 and i finished everything i needed to for this week and pulled myself out of a failing grade in Generic (shout out to Downing!!). My brother ended up coming to austin and called me around 11 and I ended up going down to Rainey St to unwind.. MUCH NEEDED. Roaming around with my brother relaxing and catching up, I actually ran into another student in class; Alfredo Montoya ! An old friend and partner of mine from last semester when we worked on Modern Web Apps together. Talked a bit about generic and the Deque project and went off to get some thing to eat with my brother. Ended the night on a good note by picking up some Halal food!</p>
+
+<p>On a completely different side note, I was just browsing the internet randomly on saturday, and I came across Downing’s twitter! Pretty surprised since I havent actually seen a professor use twitter. </p>
+
+<p>Tip of the Week:
+Never assume something for a Downing class, if you are unsure, ASK! Otherwise it will come around and bite you in the ass. When you do projects (whether or not its for this class or for another), completion is important. Never assume that you will recieve points for ‘progress.’ In the real world, as Downing had explained to me, your employer will not accept half ass-ed solutions. It either works or it doesnt. Make sure you have a working solution!</p>
+
+
+       </p>
+
+    </section>
+
+    <!--start of section author-->
+    <section class="single-author">
+        <div class="post-details">
+            
+            <span> Done At: Jul 19,2015</span>
+            <div class="categories">
+                <em>Categories:</em>
+                <ul>
+                   
+                </ul>
+            </div>
+
+          
+
+        </div>
+    </section>
+<!--End of section author-->
+	
+  <div class="col-sm-offset-2 col-sm-10 col-md-offset-2 col-md-8">
+	    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'prioblog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+	
+
+   
+  </div>
+
+</div>
+<hr/>
+
+
+
+</section>
+
+
+
+
+    <section class="footer ">
+
+    <div class="row">
+
+        <div class="col-sm-offset-3 col-md-offset-3 col-md-6 text-center">
+            
+      <span>
+        <a class="header-link" href="https://github.com/davidpeterko" target="_blank">
+            <i class="fa fa-2x fa-github-square 3x"></i>
+        </a>
+      </span>
+            
+
+
+            
+      <span>
+        <a class="header-link" href="https://twitter.com/wutangcamber" target="_blank">
+            <i class="fa fa-2x fa-twitter 3x"></i>
+        </a>
+      </span>
+            
+
+            
+      <span>
+        <a class="header-link" href="http://davidpeterko.github.io"  target="_blank">
+            <i class="fa fa-2x fa-laptop"></i>
+
+        </a>
+      </span>
+            
+
+
+            
+      <span>
+        <a class="header-link" href="https://facebook.com/nopenottodaylol"  target="_blank">
+            <i class="fa fa-2x fa-facebook-square "></i>
+        </a>
+      </span>
+            
+        </div>
+
+    </div>
+  <div class="row">
+  <div class="col-sm-offset-2 col-sm-5 col-md-offset-5 col-md-6 ">
+    <small><a href="http://www.mahabubislam.com">Mahabub I. </a><sup>&reg </sup>--- powerd by <a href="http://jekyllrb.com/">Jekyll</a></small>
+  </div>
+
+ 
+      <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'prioblog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+
+
+</section>
+
+
+    </div>
+    <!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>')</script>
+
+<!-- Add custom scripts here -->
+<!-- Bootstrap js -->
+<script type="text/javascript" src="/Blogjs/bootstrap.min.js"></script>
+
+<!-- Parallax js -->
+<script type="text/javascript" src="/Blogjquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="/Blogjquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="/Blogjquery.scrollTo-1.4.2-min.js"></script>
+<script src="/Blogjs/snippet.js"></script>
+<!-- /end of parallax js -->
+
+
+
+<!-- Add your google analytics here -->
+<!-- Change the XXXXXXX section in your site id -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+
+	
+
+
+  </body>
+
+</html>
